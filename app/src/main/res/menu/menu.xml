@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/selected"
+        android:icon="@drawable/selected_1"
+        android:title="@string/foods_ordered"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/check_order"
+        android:icon="@drawable/check_order_1"
+        android:title="@string/check_order"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/service"
+        android:icon="@drawable/service_1"
+        android:title="@string/call_for_service"
+        app:showAsAction="ifRoom|withText"
+        />
+    <item
+        android:id="@+id/update"
+        android:icon="@drawable/update"
+        android:title="@string/update"
+        app:showAsAction="ifRoom|withText"
+        />
+</menu>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="es.source.code">
+    <permission android:name="scos.permission.ACCESSSCOS"
+        android:protectionLevel="dangerous"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
+    <application
+        android:name="es.source.code.model.OrderItem"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name="es.source.code.Activity.SCOSEntry">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="es.source.code.Activity.MainScreen" android:permission="scos.permission.ACCESSSCOS" android:exported="true">
+            <intent-filter>
+                <action android:name="es.source.code.intent.action.SCOSMAIN"/>
+                <category android:name="es.source.code.intent.categaory.SCOSLAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name="es.source.code.Activity.LoginOrRegister">
+            <intent-filter>
+                <action android:name="es.source.code.intent.action.SCOSLogin"/>
+                <category android:name="es.source.code.intent.categaory.SCOSLAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name="es.source.code.Activity.FoodView">
+            <intent-filter>
+                <action android:name="android.intent.action.FoodView"/>
+                <category android:name="es.source.code.intent.categaory.SCOSLAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name="es.source.code.Activity.FoodOrderView">
+            <intent-filter>
+                <action android:name="android.intent.action.FoodOrderView"/>
+                <category android:name="es.source.code.intent.categaory.SCOSLAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name="es.source.code.Activity.FoodDetailed">
+            <intent-filter>
+                <action android:name="android.intent.action.FoodOrderView"/>
+                <category android:name="es.source.code.intent.categaory.SCOSLAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name="es.source.code.Activity.SCOSHelper">
+
+            <intent-filter>
+                <action android:name="android.intent.action.SCOSHelper"/>
+                <category android:name="es.source.code.intent.categaory.SCOSLAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <service
+        android:name="es.source.code.service.ServerObserverService"
+        android:process="es.source.code.observerService" >
+        </service>
+
+        <service
+            android:name="es.source.code.service.UpdateService"
+            android:process="es.source.code.updateService"
+            android:exported="true"
+            android:enabled="true">
+
+            <intent-filter>
+                <action android:name="es.source.code.intent.action.updateService"/>
+            </intent-filter>
+        </service>
+
+        <receiver android:name="es.source.code.br.DeviceStartedListener">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">SCOS</string>
+    <string name="order">点菜</string>
+    <string name="check">查看</string>
+    <string name="sign">登录</string>
+    <string name="help">帮助</string>
+
+    <string name="Login">登录</string>
+    <string name="register">注册</string>
+    <string name="username">用户名</string>
+    <string name="password">密码</string>
+    <string name="login_msg">登陆中，请稍候</string>
+    <string name="register_msg">注册中，请稍候</string>
+
+    <string name="homepage">主页</string>
+    <string name="login_or_register">登录\\注册</string>
+    <string name="back">返回</string>
+    <string name="invalid_input">输入内容不符合规则</string>
+    <string name="welcome">欢迎您用餐</string>
+
+    <string name="foods_ordered">已点菜品</string>
+    <string name="check_order">查看订单</string>
+    <string name="food_details">菜品详情</string>
+    <string name="call_for_service">呼叫服务</string>
+    <string name="update">启动实时更新</string>
+
+    <string name="cancel_order">退点</string>
+    <string name="sell_out">已售罄</string>
+    <string name="be_confirmed">已下单</string>
+
+    <string name="food_name">菜名：</string>
+    <string name="food_price">价格：</string>
+    <string name="stocks">余量：</string>
+    <string name="remarks">备注：</string>
+
+    <string name="order_success">点菜成功</string>
+    <string name="cancel_success">退点成功</string>
+    <string name="remark_hint_message">您可以在此注明口味偏好等</string>
+
+    <string name="agreement">使用协议</string>
+    <string name="about">关于系统</string>
+    <string name="manual_service">人工帮助</string>
+    <string name="massage_service">短信帮助</string>
+    <string name="e_mail_service">邮件帮助</string>
+
+</resources>

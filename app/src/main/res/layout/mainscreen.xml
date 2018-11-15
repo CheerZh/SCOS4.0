@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+    <GridLayout
+    android:columnCount="2"
+    android:rowCount="2"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:drawableTop="@drawable/order1" />
+    <!--在文字上方显示图片-->
+    <Button
+        android:id="@+id/check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:drawableTop="@drawable/check1" />
+    <Button
+        android:id="@+id/sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:drawableTop="@drawable/sign1" />
+    <Button
+        android:id="@+id/help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="1"
+        android:layout_column="1"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:drawableTop="@drawable/help1" />
+    </GridLayout>
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="200dp" />
+</LinearLayout>
